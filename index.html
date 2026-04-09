@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CourtSide Pickleball Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="phone-frame" aria-label="Pickleball court reservation">
+        <div class="hero">
+          <div class="status-bar" aria-hidden="true">
+            <div class="notch"></div>
+            <span class="status-time">9:41</span>
+            <div class="status-icons">
+              <span class="cellular"><i></i><i></i><i></i><i></i></span>
+              <span class="wifi"><i></i><i></i><i></i></span>
+              <span class="battery"><b></b></span>
+            </div>
+          </div>
+
+          <div class="brand-lockup">
+            <div class="logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 120 120" role="img">
+                <circle cx="60" cy="60" r="56" fill="#163A2C" />
+                <circle cx="60" cy="60" r="42" fill="#D7FF45" />
+                <rect x="48" y="30" width="10" height="42" rx="5" fill="#F7F4EC" />
+                <circle cx="74" cy="56" r="16" fill="#F27A54" />
+                <circle cx="69" cy="50" r="2" fill="#163A2C" />
+                <circle cx="80" cy="50" r="2" fill="#163A2C" />
+                <circle cx="69" cy="61" r="2" fill="#163A2C" />
+                <circle cx="80" cy="61" r="2" fill="#163A2C" />
+                <path
+                  d="M36 84c8-9 18-14 30-14 11 0 21 5 30 14"
+                  fill="none"
+                  stroke="#F7F4EC"
+                  stroke-width="8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="brand-copy">
+              <p class="eyebrow">Reserve a Court</p>
+              <h1>CourtSide Pickleball Club</h1>
+            </div>
+          </div>
+
+          <div class="venue-row">
+            <p>214 Rally Lane</p>
+            <p>(415) 555-0188</p>
+          </div>
+
+          <form class="reservation-form">
+            <label class="field field-wide dropdown" data-dropdown="date">
+              <span class="field-label">Date</span>
+              <button type="button" class="field-control" aria-expanded="false" aria-controls="date-menu">
+                <span class="field-value">Friday, April 18</span>
+                <span class="chevron">⌄</span>
+              </button>
+              <div class="dropdown-menu" id="date-menu" role="listbox" aria-label="Choose a date">
+                <button type="button" class="dropdown-option is-selected" data-value="Friday, April 18">Friday, April 18</button>
+                <button type="button" class="dropdown-option" data-value="Saturday, April 19">Saturday, April 19</button>
+                <button type="button" class="dropdown-option" data-value="Sunday, April 20">Sunday, April 20</button>
+                <button type="button" class="dropdown-option" data-value="Monday, April 21">Monday, April 21</button>
+              </div>
+            </label>
+
+            <label class="field dropdown" data-dropdown="players">
+              <span class="field-label">Players</span>
+              <button type="button" class="field-control" aria-expanded="false" aria-controls="players-menu">
+                <span class="field-value">4</span>
+                <span class="chevron">⌄</span>
+              </button>
+              <div class="dropdown-menu" id="players-menu" role="listbox" aria-label="Choose player count">
+                <button type="button" class="dropdown-option" data-value="2">2</button>
+                <button type="button" class="dropdown-option" data-value="3">3</button>
+                <button type="button" class="dropdown-option is-selected" data-value="4">4</button>
+                <button type="button" class="dropdown-option" data-value="5">5</button>
+              </div>
+            </label>
+
+            <label class="field field-time dropdown" data-dropdown="court">
+              <span class="field-label">Court</span>
+              <button type="button" class="field-control" aria-expanded="false" aria-controls="court-menu">
+                <span class="field-value">Any court</span>
+                <span class="chevron">⌄</span>
+              </button>
+              <div class="dropdown-menu" id="court-menu" role="listbox" aria-label="Choose court preference">
+                <button type="button" class="dropdown-option is-selected" data-value="Any court">Any court</button>
+                <button type="button" class="dropdown-option" data-value="Court 1 - Championship">Court 1 - Championship</button>
+                <button type="button" class="dropdown-option" data-value="Court 2 - Indoor">Court 2 - Indoor</button>
+                <button type="button" class="dropdown-option" data-value="Court 3 - Sunset View">Court 3 - Sunset View</button>
+              </div>
+            </label>
+          </form>
+        </div>
+
+        <section class="timeslots-card" aria-labelledby="timeslot-heading">
+          <div class="card-header">
+            <div>
+              <p class="card-kicker">Available Tonight</p>
+              <h2 id="timeslot-heading">Choose your start time</h2>
+            </div>
+            <p class="duration-pill">90 min</p>
+          </div>
+
+          <div class="timeslot-grid">
+            <button class="timeslot is-active" type="button">6:00 PM</button>
+            <button class="timeslot is-active" type="button">6:30 PM</button>
+            <button class="timeslot is-disabled" type="button">7:00 PM</button>
+            <button class="timeslot is-disabled" type="button">7:30 PM</button>
+            <button class="timeslot is-active" type="button">8:00 PM</button>
+            <button class="timeslot is-active" type="button">8:30 PM</button>
+            <button class="timeslot is-active" type="button">9:00 PM</button>
+            <button class="timeslot is-active" type="button">9:30 PM</button>
+            <button class="timeslot is-active" type="button">10:00 PM</button>
+            <button class="timeslot is-active" type="button">10:30 PM</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
