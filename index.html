@@ -57,28 +57,77 @@
           </div>
 
           <form class="reservation-form">
-            <label class="field field-wide">
+            <label class="field field-wide dropdown" data-dropdown="date">
               <span class="field-label">Date</span>
-              <button type="button" class="field-control">
-                <span>Friday, April 18</span>
+              <button
+                type="button"
+                class="field-control"
+                aria-expanded="false"
+                aria-controls="date-menu"
+              >
+                <span class="field-value">Friday, April 18</span>
                 <span class="chevron">⌄</span>
               </button>
+              <div class="dropdown-menu" id="date-menu" role="listbox" aria-label="Choose a date">
+                <button type="button" class="dropdown-option is-selected" data-value="Friday, April 18">
+                  Friday, April 18
+                </button>
+                <button type="button" class="dropdown-option" data-value="Saturday, April 19">
+                  Saturday, April 19
+                </button>
+                <button type="button" class="dropdown-option" data-value="Sunday, April 20">
+                  Sunday, April 20
+                </button>
+                <button type="button" class="dropdown-option" data-value="Monday, April 21">
+                  Monday, April 21
+                </button>
+              </div>
             </label>
 
-            <label class="field">
+            <label class="field dropdown" data-dropdown="players">
               <span class="field-label">Players</span>
-              <button type="button" class="field-control">
-                <span>4</span>
+              <button
+                type="button"
+                class="field-control"
+                aria-expanded="false"
+                aria-controls="players-menu"
+              >
+                <span class="field-value">4 players</span>
                 <span class="chevron">⌄</span>
               </button>
+              <div class="dropdown-menu" id="players-menu" role="listbox" aria-label="Choose player count">
+                <button type="button" class="dropdown-option" data-value="2 players">2 players</button>
+                <button type="button" class="dropdown-option" data-value="3 players">3 players</button>
+                <button type="button" class="dropdown-option is-selected" data-value="4 players">4 players</button>
+                <button type="button" class="dropdown-option" data-value="Open play">Open play</button>
+              </div>
             </label>
 
-            <label class="field field-time">
+            <label class="field field-time dropdown" data-dropdown="court">
               <span class="field-label">Court</span>
-              <button type="button" class="field-control">
-                <span>Any court</span>
+              <button
+                type="button"
+                class="field-control"
+                aria-expanded="false"
+                aria-controls="court-menu"
+              >
+                <span class="field-value">Any court</span>
                 <span class="chevron">⌄</span>
               </button>
+              <div class="dropdown-menu" id="court-menu" role="listbox" aria-label="Choose court preference">
+                <button type="button" class="dropdown-option is-selected" data-value="Any court">
+                  Any court
+                </button>
+                <button type="button" class="dropdown-option" data-value="Court 1 - Championship">
+                  Court 1 - Championship
+                </button>
+                <button type="button" class="dropdown-option" data-value="Court 2 - Indoor">
+                  Court 2 - Indoor
+                </button>
+                <button type="button" class="dropdown-option" data-value="Court 3 - Sunset View">
+                  Court 3 - Sunset View
+                </button>
+              </div>
             </label>
           </form>
         </div>
