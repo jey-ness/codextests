@@ -56,8 +56,7 @@ select {
   justify-content: flex-start;
   background:
     linear-gradient(180deg, rgba(7, 18, 13, 0.28) 0%, rgba(7, 18, 13, 0.58) 38%, rgba(7, 18, 13, 0.8) 72%, rgba(7, 18, 13, 0.92) 100%),
-    url("https://images.unsplash.com/photo-1626224583764-f87db24ac4a4?auto=format&fit=crop&w=1200&q=80")
-      center/cover;
+    url("https://images.unsplash.com/photo-1626224583764-f87db24ac4a4?auto=format&fit=crop&w=1200&q=80") center/cover;
   color: white;
 }
 
@@ -220,15 +219,21 @@ select {
 }
 
 .field {
-  width: 106px;
+  flex: 1 1 0;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 6px;
   position: relative;
 }
 
-.field-wide { width: 100%; }
-.field-time { width: 201px; }
+.field-wide {
+  flex-basis: 100%;
+}
+
+.field-time {
+  flex: 1.9 1 0;
+}
 
 .field-label {
   font-size: 14px;
@@ -245,6 +250,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
   padding: 0 16px;
   cursor: pointer;
   text-align: left;
@@ -258,6 +264,7 @@ select {
 }
 
 .chevron {
+  flex: 0 0 auto;
   font-size: 18px;
   transform: translateY(-2px);
 }
@@ -299,6 +306,7 @@ select {
 
 .timeslots-card {
   width: 370px;
+  max-width: calc(100% - 22px);
   margin: -22px auto 0;
   background: var(--card);
   box-shadow: var(--shadow);
@@ -384,10 +392,75 @@ select {
 }
 
 @media (max-width: 420px) {
-  .app-shell { padding: 0; }
+  .app-shell {
+    padding: 0;
+  }
+
   .phone-frame {
     width: 100%;
     min-height: 100vh;
     border-radius: 0;
+  }
+
+  .hero {
+    padding: 14px 20px 24px;
+  }
+
+  .brand-lockup {
+    gap: 12px;
+  }
+
+  .logo-mark {
+    width: 78px;
+    height: 78px;
+  }
+
+  .brand-copy h1 {
+    font-size: 26px;
+    max-width: 160px;
+  }
+
+  .venue-row {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .field-label {
+    font-size: 13px;
+    letter-spacing: 0.14em;
+  }
+
+  .field-control {
+    height: 52px;
+    padding: 0 12px;
+  }
+
+  .field-time {
+    flex: 1.5 1 0;
+  }
+
+  .timeslots-card {
+    max-width: calc(100% - 16px);
+    padding: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .reservation-form {
+    gap: 14px 12px;
+  }
+
+  .field,
+  .field-time {
+    flex-basis: 100%;
+  }
+
+  .venue-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeslot-grid {
+    grid-template-columns: 1fr;
   }
 }
